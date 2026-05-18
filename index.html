@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shreyash Ghagare | Data Analyst Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f7f9fc;
+      color: #1f2937;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #111827;
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      max-width: 750px;
+      margin: 0 auto 25px;
+      color: #d1d5db;
+    }
+
+    .button-group a {
+      display: inline-block;
+      margin: 8px;
+      padding: 12px 20px;
+      background: #2563eb;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+
+    .button-group a.secondary {
+      background: #374151;
+    }
+
+    nav {
+      background: white;
+      padding: 15px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav a {
+      margin: 0 12px;
+      color: #111827;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    section {
+      max-width: 1050px;
+      margin: auto;
+      padding: 50px 20px;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #111827;
+    }
+
+    .about-card, .project-card, .skills-card {
+      background: white;
+      border-radius: 10px;
+      padding: 25px;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.07);
+      margin-bottom: 20px;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .project-card h3 {
+      margin-bottom: 10px;
+      color: #1d4ed8;
+    }
+
+    .tag {
+      display: inline-block;
+      background: #e5e7eb;
+      color: #374151;
+      padding: 5px 8px;
+      border-radius: 5px;
+      font-size: 0.85rem;
+      margin: 5px 5px 5px 0;
+    }
+
+    .project-links a {
+      display: inline-block;
+      margin-top: 15px;
+      margin-right: 10px;
+      color: #2563eb;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    footer {
+      background: #111827;
+      color: #d1d5db;
+      text-align: center;
+      padding: 25px;
+      margin-top: 30px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      nav a {
+        display: inline-block;
+        margin: 8px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Shreyash Ghagare</h1>
+    <p>Data-focused Support Engineer with experience in Python, SQL, automation, reporting, telecom analytics, and machine learning. Building practical data solutions that turn operational data into business insights.</p>
+    <div class="button-group">
+      <a href="#projects">View Projects</a>
+      <a href="#contact" class="secondary">Contact Me</a>
+    </div>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <div class="about-card">
+      <p>I am a data-focused professional with 3+ years of experience in system support, data analysis, reporting automation, and operational analytics. I recently completed my Master’s in Mathematical Modelling and Data Predictions from the University of Alberta. My work focuses on using Python, SQL, dashboards, and machine learning to solve practical business and operational problems.</p>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <div class="skills-card">
+        <h3>Programming & Data</h3>
+        <p>Python, Pandas, NumPy, SQL, R, PySpark</p>
+      </div>
+      <div class="skills-card">
+        <h3>Analytics & ML</h3>
+        <p>EDA, Hypothesis Testing, Classification, Regression, Model Evaluation</p>
+      </div>
+      <div class="skills-card">
+        <h3>Visualization</h3>
+        <p>Power BI, Tableau, Excel Dashboards, Matplotlib, Seaborn</p>
+      </div>
+      <div class="skills-card">
+        <h3>Tools</h3>
+        <p>GitHub, Jupyter Notebook, SQLite, Task Scheduler, Grafana, Kibana</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project-grid">
+
+      <div class="project-card">
+        <h3>Customer Churn Prediction & Business Analytics</h3>
+        <p>Built an end-to-end analytics project to identify churn drivers, analyze customer segments, and predict churn using machine learning models.</p>
+        <span class="tag">Python</span>
+        <span class="tag">SQL</span>
+        <span class="tag">Machine Learning</span>
+        <span class="tag">Tableau</span>
+        <div class="project-links">
+          <a href="#">GitHub</a>
+          <a href="#">Case Study</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <h3>Movie Genre Analysis Using Spark Pair RDDs</h3>
+        <p>Analyzed movie genre frequency using Spark Pair RDDs and demonstrated distributed data processing concepts such as map, flatMap, and reduceByKey.</p>
+        <span class="tag">PySpark</span>
+        <span class="tag">RDD</span>
+        <span class="tag">Big Data</span>
+        <div class="project-links">
+          <a href="#">GitHub</a>
+          <a href="#">Case Study</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <h3>Missing eNodeB Monitoring Report</h3>
+        <p>Automated daily telecom reporting to identify sites with zero connection setup requests, summarize market-level impact, and support faster operational issue resolution.</p>
+        <span class="tag">Python</span>
+        <span class="tag">Automation</span>
+        <span class="tag">Telecom Analytics</span>
+        <span class="tag">CSV Processing</span>
+        <div class="project-links">
+          <a href="#">Details</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <h3>Telecom Usage Analytics Dashboard</h3>
+        <p>Created automated reporting dashboards to track nationwide and market-level user activity, analysis usage trends, and operational insights.</p>
+        <span class="tag">Excel</span>
+        <span class="tag">Power BI</span>
+        <span class="tag">Reporting</span>
+        <span class="tag">Data Visualization</span>
+        <div class="project-links">
+          <a href="#">Dashboard</a>
+          <a href="#">Case Study</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="about-card">
+      <p>Email: your-email@example.com</p>
+      <p>LinkedIn: <a href="#">Add your LinkedIn link</a></p>
+      <p>GitHub: <a href="#">Add your GitHub link</a></p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Shreyash Ghagare. Built with HTML, CSS, and GitHub Pages.</p>
+  </footer>
+
+</body>
+</html>
