@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shreyash Ghagare | Data Analyst Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Shreyash Ghagare | Data Science & AI Portfolio</title>
+
   <style>
     * {
       margin: 0;
@@ -12,28 +15,39 @@
       font-family: Arial, sans-serif;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       background: #f7f9fc;
       color: #1f2937;
-      line-height: 1.6;
+      line-height: 1.65;
     }
 
     header {
       background: #111827;
       color: white;
-      padding: 60px 20px;
+      padding: 72px 20px;
       text-align: center;
     }
 
     header h1 {
-      font-size: 2.5rem;
+      font-size: 2.7rem;
       margin-bottom: 10px;
     }
 
-    header p {
-      font-size: 1.1rem;
-      max-width: 750px;
-      margin: 0 auto 25px;
+    header .headline {
+      font-size: 1.15rem;
+      font-weight: bold;
+      color: #93c5fd;
+      margin-bottom: 14px;
+    }
+
+    header .intro {
+      font-size: 1.05rem;
+      max-width: 820px;
+      margin: 0 auto 28px;
       color: #d1d5db;
     }
 
@@ -70,40 +84,79 @@
     }
 
     section {
-      max-width: 1050px;
+      max-width: 1120px;
       margin: auto;
-      padding: 50px 20px;
+      padding: 52px 20px;
     }
 
     h2 {
       font-size: 2rem;
-      margin-bottom: 20px;
+      margin-bottom: 22px;
       color: #111827;
     }
 
-    .about-card, .project-card, .skills-card {
+    .section-intro {
+      margin-top: -10px;
+      margin-bottom: 25px;
+      color: #6b7280;
+      max-width: 850px;
+    }
+
+    .about-card,
+    .project-card,
+    .skills-card,
+    .contact-card {
       background: white;
       border-radius: 10px;
       padding: 25px;
       box-shadow: 0 4px 14px rgba(0, 0, 0, 0.07);
-      margin-bottom: 20px;
+    }
+
+    .about-card p + p {
+      margin-top: 14px;
     }
 
     .skills-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 20px;
+    }
+
+    .skills-card h3 {
+      margin-bottom: 10px;
+      color: #111827;
     }
 
     .project-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 22px;
+    }
+
+    .project-card {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
     }
 
     .project-card h3 {
       margin-bottom: 10px;
       color: #1d4ed8;
+    }
+
+    .project-card p {
+      margin-bottom: 12px;
+    }
+
+    .project-result {
+      margin-top: 8px;
+      font-size: 0.93rem;
+      color: #4b5563;
+    }
+
+    .tag-list {
+      margin-top: auto;
+      padding-top: 6px;
     }
 
     .tag {
@@ -112,17 +165,31 @@
       color: #374151;
       padding: 5px 8px;
       border-radius: 5px;
-      font-size: 0.85rem;
+      font-size: 0.82rem;
       margin: 5px 5px 5px 0;
+    }
+
+    .project-links {
+      margin-top: 10px;
     }
 
     .project-links a {
       display: inline-block;
-      margin-top: 15px;
-      margin-right: 10px;
+      margin-top: 8px;
+      margin-right: 12px;
       color: #2563eb;
       text-decoration: none;
       font-weight: bold;
+    }
+
+    .contact-card p {
+      margin: 8px 0;
+    }
+
+    .contact-card a {
+      color: #2563eb;
+      text-decoration: none;
+      font-weight: 600;
     }
 
     footer {
@@ -135,200 +202,419 @@
 
     @media (max-width: 600px) {
       header h1 {
-        font-size: 2rem;
+        font-size: 2.1rem;
       }
 
       nav a {
         display: inline-block;
         margin: 8px;
       }
+
+      section {
+        padding: 40px 16px;
+      }
     }
   </style>
 </head>
+
+
 <body>
 
   <header>
     <h1>Shreyash Ghagare</h1>
-    <p>Data-focused Support Engineer with experience in Python, SQL, automation, reporting, telecom analytics, and machine learning. Building practical data solutions that turn operational data into business insights.</p>
+
+    <div class="headline">
+      Data Science • Machine Learning • Analytics • Generative AI
+    </div>
+
+    <p class="intro">
+      I build practical data products that turn raw data into analysis,
+      predictions, forecasts, dashboards, and AI-assisted decision support.
+      My work combines Python, SQL, statistics, machine learning, visualization,
+      deep learning, and Generative AI.
+    </p>
+
     <div class="button-group">
-      <a href="#projects">View Projects</a>
+      <a href="#featured-projects">View Projects</a>
       <a href="#contact" class="secondary">Contact Me</a>
     </div>
   </header>
 
+
   <nav>
     <a href="#about">About</a>
     <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
+    <a href="#featured-projects">Projects</a>
     <a href="#contact">Contact</a>
   </nav>
 
+
   <section id="about">
     <h2>About Me</h2>
+
     <div class="about-card">
-      <p>I am a data-focused professional with 3+ years of experience in system support, data analysis, reporting automation, and operational analytics. I recently completed my Master’s in Mathematical Modelling and Data Predictions from the University of Alberta. My work focuses on using Python, SQL, dashboards, and machine learning to solve practical business and operational problems.</p>
+      <p>
+        I am a data and analytics professional with experience using Python,
+        SQL, automation, statistical analysis, and visualization to solve
+        operational and business problems. I recently completed a Master's
+        in Mathematical Modelling and Data Predictions from the University of Alberta.
+      </p>
+
+      <p>
+        My recent work focuses on end-to-end data products: exploratory analysis,
+        statistical testing, feature engineering, machine learning, neural networks,
+        forecasting, Tableau dashboards, Flask applications, and retrieval-augmented
+        generation with local LLMs.
+      </p>
+
+      <p>
+        I am particularly interested in Data Science, Machine Learning,
+        AI, and Analytics roles where technical analysis can be translated
+        into practical business decisions.
+      </p>
     </div>
   </section>
+
 
   <section id="skills">
     <h2>Skills</h2>
+
     <div class="skills-grid">
+
       <div class="skills-card">
         <h3>Programming & Data</h3>
-        <p>Python, Pandas, NumPy, SQL, R, PySpark</p>
+        <p>
+          Python, SQL, R, Pandas, NumPy, PySpark, MySQL, Databricks
+        </p>
       </div>
+
       <div class="skills-card">
-        <h3>Analytics & ML</h3>
-        <p>EDA, Hypothesis Testing, Classification, Regression, Model Evaluation</p>
+        <h3>Data Science & Statistics</h3>
+        <p>
+          EDA, Hypothesis Testing, Feature Engineering, Classification,
+          Regression, Forecasting, Cross-Validation, Model Evaluation
+        </p>
       </div>
+
       <div class="skills-card">
-        <h3>Visualization</h3>
-        <p>Power BI, Tableau, Excel Dashboards, Matplotlib, Seaborn</p>
+        <h3>Machine Learning & Deep Learning</h3>
+        <p>
+          Scikit-learn, Logistic Regression, Decision Trees, Random Forest,
+          ANN, LSTM, TensorFlow, Keras
+        </p>
       </div>
+
       <div class="skills-card">
-        <h3>Tools</h3>
-        <p>GitHub, Jupyter Notebook, SQLite, Task Scheduler, Grafana, Kibana</p>
+        <h3>Generative AI</h3>
+        <p>
+          RAG, Embeddings, Vector Search, ChromaDB, Prompt Engineering,
+          Ollama, Llama, LangChain
+        </p>
       </div>
+
+      <div class="skills-card">
+        <h3>Visualization & BI</h3>
+        <p>
+          Tableau, Power BI, Excel Dashboards, Matplotlib, Seaborn
+        </p>
+      </div>
+
+      <div class="skills-card">
+        <h3>Applications & Tools</h3>
+        <p>
+          Flask, GitHub, Jupyter Notebook, Spark, Grafana, Kibana
+        </p>
+      </div>
+
     </div>
   </section>
 
-  <section id="projects">
-    <h2>Projects</h2>
+
+  <section id="featured-projects">
+    <h2>Featured Projects</h2>
+
+    <p class="section-intro">
+      These are the projects that best represent my current work across
+      data science, machine learning, forecasting, deep learning, BI, and Generative AI.
+    </p>
+
     <div class="project-grid">
+
       <div class="project-card">
-    <h3>Customer Intelligence Platform</h3>
+        <h3>Customer Intelligence Platform</h3>
 
-    <p>
-        Built an end-to-end churn analytics platform to identify high-risk
-        customers and support retention decisions. Compared traditional machine
-        learning models with an ANN, then selected the tuned Random Forest based
-        on test performance.
-    </p>
+        <p>
+          Built an end-to-end churn analytics platform for 7,043 telecom customers.
+          Combined exploratory analysis, statistical testing, predictive modeling,
+          customer risk segmentation, and retention-focused decision support.
+        </p>
 
-    <span class="tag">Python</span>
-    <span class="tag">Machine Learning</span>
-    <span class="tag">ANN</span>
-    <span class="tag">TensorFlow</span>
-    <span class="tag">Tableau</span>
-    <span class="tag">Flask</span>
-    <span class="tag">Ollama</span>
+        <p class="project-result">
+          Compared traditional ML models with an ANN. Tuned Random Forest
+          achieved the strongest test ROC-AUC at 0.8441 and was retained as
+          the final model.
+        </p>
 
-    <div class="project-links">
-        <a href="https://github.com/SG29uofa/Customer-Intelligence-Platform"
-           target="_blank">GitHub</a>
+        <div class="tag-list">
+          <span class="tag">Python</span>
+          <span class="tag">Statistics</span>
+          <span class="tag">Random Forest</span>
+          <span class="tag">ANN</span>
+          <span class="tag">TensorFlow</span>
+          <span class="tag">Tableau</span>
+          <span class="tag">Flask</span>
+          <span class="tag">Ollama</span>
+        </div>
 
-        <a href="https://public.tableau.com/app/profile/shreyash.ghagare/viz/Customer_Intelligence_Platform/CustomerIntelligenceDashboard?publish=yes"
-       target="_blank">Dashboard</a>
-    </div>
-</div>
-
-
-<div class="project-card">
-    <h3>Intelligent Business Forecasting</h3>
-
-    <p>
-        Built a sales forecasting platform using historical retail data.
-        Compared Random Forest with an LSTM on the same held-out test period,
-        retained Random Forest based on lower forecast error, and delivered the
-        results through Tableau, Flask, and AI-generated explanations.
-    </p>
-
-    <span class="tag">Python</span>
-    <span class="tag">Random Forest</span>
-    <span class="tag">LSTM</span>
-    <span class="tag">TensorFlow</span>
-    <span class="tag">Tableau</span>
-    <span class="tag">Flask</span>
-    <span class="tag">Ollama</span>
-
-    <div class="project-links">
-        <a href="https://github.com/SG29uofa/Intelligent-Business-Forecasting"
-           target="_blank">GitHub</a>
-        <a href="https://public.tableau.com/app/profile/shreyash.ghagare/viz/Intelligent_Business_Forecasting/Dashboard1?publish=yes"
-       target="_blank">Dashboard</a>
-    </div>
-</div>
-      <div class="project-card">
-    <h3>Enterprise AI Knowledge Assistant</h3>
-
-    <p>
-        Built a RAG-based assistant that retrieves relevant information from
-        company documents and generates grounded answers using a local LLM.
-        Added source attribution and handling for unsupported questions.
-    </p>
-
-    <span class="tag">Python</span>
-    <span class="tag">RAG</span>
-    <span class="tag">ChromaDB</span>
-    <span class="tag">Ollama</span>
-    <span class="tag">Flask</span>
-
-    <div class="project-links">
-        <a href="https://github.com/SG29uofa/enterprise-ai-knowledge-assistant"
-           target="_blank">GitHub</a>
-    </div>
-</div>
-      <div class="project-card">
-        <h3>Customer Churn Prediction & Business Analytics</h3>
-        <p>Built an end-to-end analytics project to identify churn drivers, analyze customer segments, and predict churn using machine learning models.</p>
-        <span class="tag">Python</span>
-        <span class="tag">SQL</span>
-        <span class="tag">Machine Learning</span>
-        <span class="tag">Tableau</span>
         <div class="project-links">
-          <a href="#">GitHub</a>
-          <a href="#">Case Study</a>
+          <a href="https://github.com/SG29uofa/Customer-Intelligence-Platform"
+             target="_blank">GitHub</a>
+
+          <a href="https://public.tableau.com/app/profile/shreyash.ghagare/viz/Customer_Intelligence_Platform/CustomerIntelligenceDashboard?publish=yes"
+             target="_blank">Live Dashboard</a>
         </div>
       </div>
+
+
+      <div class="project-card">
+        <h3>Intelligent Business Forecasting</h3>
+
+        <p>
+          Built a sales forecasting platform using historical retail data,
+          chronological model validation, feature engineering, future forecasting,
+          and business-facing visualization.
+        </p>
+
+        <p class="project-result">
+          Compared Random Forest with a 30-day-sequence LSTM on the same
+          76-day held-out test period. Random Forest achieved 6.03% MAPE
+          versus 14.73% for LSTM and was retained as the final model.
+        </p>
+
+        <div class="tag-list">
+          <span class="tag">Python</span>
+          <span class="tag">Feature Engineering</span>
+          <span class="tag">Random Forest</span>
+          <span class="tag">LSTM</span>
+          <span class="tag">TensorFlow</span>
+          <span class="tag">Tableau</span>
+          <span class="tag">Flask</span>
+          <span class="tag">Ollama</span>
+        </div>
+
+        <div class="project-links">
+          <a href="https://github.com/SG29uofa/Intelligent-Business-Forecasting"
+             target="_blank">GitHub</a>
+
+          <a href="https://public.tableau.com/app/profile/shreyash.ghagare/viz/Intelligent_Business_Forecasting/Dashboard1?publish=yes"
+             target="_blank">Live Dashboard</a>
+        </div>
+      </div>
+
+
+      <div class="project-card">
+        <h3>Enterprise AI Knowledge Assistant</h3>
+
+        <p>
+          Built a RAG-based assistant that retrieves relevant information from
+          company documents and generates grounded answers using a locally
+          running LLM.
+        </p>
+
+        <p class="project-result">
+          Added semantic retrieval, relevance filtering, source attribution,
+          unsupported-question handling, prompt guardrails, and lightweight
+          LLM tool routing.
+        </p>
+
+        <div class="tag-list">
+          <span class="tag">Python</span>
+          <span class="tag">RAG</span>
+          <span class="tag">Embeddings</span>
+          <span class="tag">ChromaDB</span>
+          <span class="tag">Prompt Engineering</span>
+          <span class="tag">Ollama</span>
+          <span class="tag">Flask</span>
+        </div>
+
+        <div class="project-links">
+          <a href="https://github.com/SG29uofa/enterprise-ai-knowledge-assistant"
+             target="_blank">GitHub</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <section id="additional-projects">
+    <h2>Additional Projects</h2>
+
+    <p class="section-intro">
+      Additional work showing experience across SQL, RAG, Spark,
+      Databricks, distributed processing, analytics, and machine learning.
+    </p>
+
+    <div class="project-grid">
+
+      <div class="project-card">
+        <h3>QueryMind AI — Text-to-SQL</h3>
+
+        <p>
+          Built a local Text-to-SQL analytics system that converts natural-language
+          business questions into SQL, executes queries against a relational database,
+          and returns analytical results.
+        </p>
+
+        <div class="tag-list">
+          <span class="tag">Python</span>
+          <span class="tag">SQL</span>
+          <span class="tag">LangChain</span>
+          <span class="tag">Ollama</span>
+          <span class="tag">MySQL</span>
+          <span class="tag">SQLAlchemy</span>
+        </div>
+
+        <div class="project-links">
+          <a href="https://github.com/SG29uofa/QueryMind-AI-Text-to-SQL"
+             target="_blank">GitHub</a>
+        </div>
+      </div>
+
+
+      <div class="project-card">
+        <h3>Superstore Assistant</h3>
+
+        <p>
+          Built a local RAG assistant for retail data using semantic search,
+          vector embeddings, ChromaDB, Flask, and a locally hosted Llama model.
+        </p>
+
+        <div class="tag-list">
+          <span class="tag">Python</span>
+          <span class="tag">RAG</span>
+          <span class="tag">ChromaDB</span>
+          <span class="tag">SentenceTransformers</span>
+          <span class="tag">Ollama</span>
+          <span class="tag">Flask</span>
+        </div>
+
+        <div class="project-links">
+          <a href="https://github.com/SG29uofa/Superstore-Assistant"
+             target="_blank">GitHub</a>
+        </div>
+      </div>
+
+
+      <div class="project-card">
+        <h3>Retail Sales Analytics — PySpark & Databricks</h3>
+
+        <p>
+          Built a retail analytics workflow using PySpark, Spark SQL,
+          Databricks, and Delta tables to prepare KPI-ready analytical data
+          and support dashboard reporting.
+        </p>
+
+        <div class="tag-list">
+          <span class="tag">PySpark</span>
+          <span class="tag">Databricks</span>
+          <span class="tag">Spark SQL</span>
+          <span class="tag">Delta</span>
+          <span class="tag">Big Data</span>
+        </div>
+
+        <div class="project-links">
+          <!-- Replace with the exact GitHub repository URL if different -->
+          <a href="https://github.com/SG29uofa/retail-sales-analysis-pyspark-dataframe"
+             target="_blank">GitHub</a>
+        </div>
+      </div>
+
 
       <div class="project-card">
         <h3>Movie Genre Analysis Using Spark Pair RDDs</h3>
-        <p>Analyzed movie genre frequency using Spark Pair RDDs and demonstrated distributed data processing concepts such as map, flatMap, and reduceByKey.</p>
-        <span class="tag">PySpark</span>
-        <span class="tag">RDD</span>
-        <span class="tag">Big Data</span>
+
+        <p>
+          Analyzed movie genre frequency using Spark Pair RDDs and practiced
+          distributed data-processing concepts including map, flatMap,
+          key-value transformations, and reduceByKey.
+        </p>
+
+        <div class="tag-list">
+          <span class="tag">PySpark</span>
+          <span class="tag">Spark</span>
+          <span class="tag">RDD</span>
+          <span class="tag">Distributed Processing</span>
+        </div>
+
         <div class="project-links">
-          <a href="#">GitHub</a>
-          <a href="#">Case Study</a>
+          <a href="https://github.com/SG29uofa/movie-genre-analysis-spark-rdd"
+             target="_blank">GitHub</a>
         </div>
       </div>
 
-      <div class="project-card">
-        <h3>Missing eNodeB Monitoring Report</h3>
-        <p>Automated daily telecom reporting to identify sites with zero connection setup requests, summarize market-level impact, and support faster operational issue resolution.</p>
-        <span class="tag">Python</span>
-        <span class="tag">Automation</span>
-        <span class="tag">Telecom Analytics</span>
-        <span class="tag">CSV Processing</span>
-        <div class="project-links">
-          <a href="#">Details</a>
-        </div>
-      </div>
 
       <div class="project-card">
-        <h3>Telecom Usage Analytics Dashboard</h3>
-        <p>Created automated reporting dashboards to track nationwide and market-level user activity, analysis usage trends, and operational insights.</p>
-        <span class="tag">Excel</span>
-        <span class="tag">Power BI</span>
-        <span class="tag">Reporting</span>
-        <span class="tag">Data Visualization</span>
+        <h3>AI-Powered Banking Analytics System</h3>
+
+        <p>
+          Analyzed 11K+ banking customer records using SQL, statistical analysis,
+          feature engineering, and machine learning to study term-deposit behavior
+          and build interpretable analytical workflows.
+        </p>
+
+        <div class="tag-list">
+          <span class="tag">Python</span>
+          <span class="tag">SQL</span>
+          <span class="tag">Statistics</span>
+          <span class="tag">Scikit-learn</span>
+          <span class="tag">Databricks</span>
+        </div>
+
         <div class="project-links">
-          <a href="#">Dashboard</a>
-          <a href="#">Case Study</a>
+          <a href="https://github.com/SG29uofa/AI-Powered-Banking-Analytics-System"
+             target="_blank">GitHub</a>
         </div>
       </div>
 
     </div>
   </section>
+
 
   <section id="contact">
     <h2>Contact</h2>
-    <div class="about-card">
-      <p>Email: your-email@example.com</p>
-      <p>LinkedIn: <a href="#">Add your LinkedIn link</a></p>
-      <p>GitHub: <a href="#">Add your GitHub link</a></p>
+
+    <div class="contact-card">
+      <p>
+        <strong>Email:</strong>
+        <a href="mailto:shreyash.ghagare86@gmail.com">
+          shreyash.ghagare86@gmail.com
+        </a>
+      </p>
+
+      <p>
+        <strong>LinkedIn:</strong>
+        <a href="https://www.linkedin.com/in/shreyash-ghagare-3795317a/"
+           target="_blank">
+          LinkedIn Profile
+        </a>
+      </p>
+
+      <p>
+        <strong>GitHub:</strong>
+        <a href="https://github.com/SG29uofa"
+           target="_blank">
+          github.com/SG29uofa
+        </a>
+      </p>
+
+      <p>
+        <strong>Location:</strong>
+        Edmonton, Alberta, Canada
+      </p>
     </div>
   </section>
+
 
   <footer>
     <p>© 2026 Shreyash Ghagare. Built with HTML, CSS, and GitHub Pages.</p>
